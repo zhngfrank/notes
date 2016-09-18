@@ -1,0 +1,78 @@
+Things to note:
+
+dd: entire line
+p: past entire line
+
+hl: left righ
+jk: down up
+
+0: move to front of line
+
+gg: page up
+G: page down
+#G: skip to that line
+ctrl-g: show current line and file info
+
+
+x: delete current char
+
+dw vs de:
+given "lorem ipsum dolor":
+	de on p of ipsum: "lorem i dolor"
+	whereas dw on p of ipsum: "lorem idolor"
+d$: delete from here to end of line
+
+:q! trash all changes
+:wq save changes
+
+
+i: insert text before
+a: insert text after
+
+u: undo any previous change
+U: undo previous change on same line
+ctrl-r: redo
+
+r: replace current character e.g. "re" changes curent letter to e
+ce: change until end of word
+c$ change to end of line
+
+
+/: search for something down
+?: search for something up
+n: search next (down)
+n: search next (Up)
+ctrl: o return to whence you came
+#additional search operators:
+	:set xxx
+	ic = ignore case
+	is = partial matches
+	hls = highlight matches
+	prepend no to switch off
+
+
+
+%: place on bracket, jumps to matching  bracket
+
+:#,#s/old/new/g change everything between two lines
+:%s/old/new/g change every occurance in the file
+:%s/old/new/gc as above, but with prompt (preferred)
+:s/old/new/g just replace the line
+
+:! enter command prompt from within folder
+
+:!ls:w <filename.extension> save a copy
+
+v: visual, see visual highlighting
+
+:r put output of command or file beneath cursor e.g. :r <filename> or :r <!ls>
+
+O: move cursor one line up, enter insert
+o: move cursor one line down, enter insert
+
+R: overwrite
+
+y: copy (yank)
+p: paste
+
+
