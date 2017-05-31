@@ -1,0 +1,37 @@
+JARGON
+record: individual items
+field: thingsi n a record
+object: a collection of specific data i.e. tab on spreadsheet
+    very much in the OO sense, if it makes sense as a data class then it's an object here
+org: where all data, config and customization lives
+
+programmatic: Apex(OO, java), Visualforce(MD, html), SOQL (SQL), lightning components (UI)
+
+app: specific feature
+
+everything starts at setup
+except:
+records and dashboards: record tab
+
+setup search everything
+schema builder: drag and drop interactive map of objects. like spyce simulator
+
+package management: installed packages through setup > quickfind
+
+dev priority according to SF at least:
+    1) salesforce 
+    2) point and click
+    3) programmatic
+    
+Identity field: 15 char alphanumeric tag
+    human readable: use <Name> or <Auto Number>. Autonumber is an auto incremenenting identifier
+
+relations:
+    lookup: related records in subject only. No dependency
+    Master-Detail: hierarchichal records. Strong dependency (inheritance)
+
+custom object:   
+    setup > objects > new custom object
+    once done will see custom object api tag
+
+custom field:
