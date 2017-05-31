@@ -1,17 +1,17 @@
 JARGON
-record: individual items
-field: thingsi n a record
-object: a collection of specific data i.e. tab on spreadsheet
-    very much in the OO sense, if it makes sense as a data class then it's an object here
-org: where all data, config and customization lives
+	record: individual items
+	field: thingsi n a record
+	object: a collection of specific data i.e. tab on spreadsheet
+		very much in the OO sense, if it makes sense as a data class then it's an object here
+	org: where all data, config and customization lives
 
 programmatic: Apex(OO, java), Visualforce(MD, html), SOQL (SQL), lightning components (UI)
 
 app: specific feature
 
 everything starts at setup
-except:
-records and dashboards: record tab
+	except:
+	records and dashboards: record tab
 
 setup search everything
 schema builder: drag and drop interactive map of objects. like spyce simulator
@@ -29,9 +29,52 @@ Identity field: 15 char alphanumeric tag
 relations:
     lookup: related records in subject only. No dependency
     Master-Detail: hierarchichal records. Strong dependency (inheritance)
+	setup > select object >  new custom fields & relationships > trivial, QED
+	schema good for visualizing this and creating the actual objects + relationship ( I think)
 
 custom object:   
     setup > objects > new custom object
     once done will see custom object api tag
 
 custom field:
+    setup > select object >  new custom fields & relationships > select type > next > implement details
+
+visualforce:
+    seems to be basic html text formatting, i.e. <h1></h1><p></p>
+
+help pages:
+    setup > pages> visual force pages> new > implement names > implement markup > ...
+        setup > select object > edit(next to object name) > open window using visual force page
+
+edit picklist fields:
+	object > custom fields & relationships > <field> > new picklist values
+	make sure:
+		dependent objects are aware and can deal with the changes
+		add help text (visual force?)-------------------------------> any way to add custom <class:hover> tag?
+		good object, field and label naming convention
+	
+Data import/export:
+	import:
+		Data import wizard: up to 50K records at a time. Easy to configure
+		Data Loader: more compicated, install app, 5mill records at a time. API accessible
+		prefer data import wizard when possible
+		setup > data import wizard > launch > select object type > select new/update/both > WIZARD
+	export: (backups!)
+		Data Export Wizard: manual: 6 or 28 day export. Automatic: 1 week or month
+		Loader: same
+		data export wizard: follow through
+
+UI:
+	customize tabs: + > customize tabs
+	custom object tab: setup > tabs > create custom obect > tab style stuff > ...
+						append tab to user's existing personal customizations
+	custom button:
+		object management > buttons, links and actions > might need code > ...
+			add to pagel layout
+		global button overrides are available
+	custom page layouts:
+		drag and drop editor
+	custom list view:
+		create new view > <name> > add filter logic (AND with add row) > fields to display > save
+	
+		
